@@ -92,6 +92,17 @@ function DemographicInfoPanel(DemoData)
     }
 };
 
+// OnChange function for select. Takes in the Test Subject ID to fitler on
+function optionChanged(otuId) {  
+    let barplotupdate = getBarData(otuId);
+    Plotly.react('bar', barplotupdate.trace, barplotupdate.layout); 
+
+    let bubbleplotupdate = getBubbleData(otuId);
+    Plotly.react('bubble', bubbleplotupdate.trace, bubbleplotupdate.layout); 
+
+    let metaInfo = getMetaData(otuId);
+    DemographicInfoPanel(metaInfo); 
+}
 
 // Load the data
 d3.json("data/samples.json")
