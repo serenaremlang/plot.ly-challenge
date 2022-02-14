@@ -72,10 +72,10 @@ function getBubbleData(otuId) {
 // Function to get data for demographic box
 function getMetaData(otuId) {
     //filter the data for the plot, labels and hovertext
-    let DemographicData = metaData.filter(demographicData => demographicData.id == otuId);
+    let demographicData = metaData.filter(demographicData => demographicData.id == otuId);
 
-    return DemographicData[0];
-}
+    return demographicData[0];
+};
 
 // Function to update the demographic info panel
 function DemographicInfoPanel(DemoData)
