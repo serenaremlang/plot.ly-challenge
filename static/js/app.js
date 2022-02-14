@@ -86,8 +86,11 @@ function DemographicInfoPanel(DemoData)
     for (const [key, value] of Object.entries(DemoData)) {
         var row = divfordemo.append("div")
         row.append("span")
+            .style("font-size", "90%")
+            .style("padding-right", "3px")
             .text(key + ": ");
         row.append('span')
+            .style("font-size", "90%")
             .text(value);
     }
 };
