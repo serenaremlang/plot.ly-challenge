@@ -1,13 +1,11 @@
-
-
 // Function to get OUT data for Bar plot
 function getBarData(otuId) {
     //filter the data for the plot, labels and hovertext
-    let sample_subset = samples.filter(sample => sample.id === otuId);
-    let sample_values = sample_subset[0].sample_values.slice(0,10);
-    let otu_ids = sample_subset[0].otu_ids.slice(0,10);
-    let otu_hovertext = sample_subset[0].otu_labels.slice(0,10);
-    otu_ids = otu_ids.map(lbl => "OTU" + lbl);
+    let sample_subset = samples.filter(sample => sample.id === otuId).reverse();
+    let sample_values = sample_subset[0].sample_values.slice(0,10).reverse();
+    let otu_ids = sample_subset[0].otu_ids.slice(0,10).reverse();
+    let otu_hovertext = sample_subset[0].otu_labels.slice(0,10).reverse();
+    otu_ids = otu_ids.map(lbl => "OTU " + lbl);
 
 
     // bar chart
