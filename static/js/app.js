@@ -81,6 +81,7 @@ function getMetaData(otuId) {
 function DemographicInfoPanel(DemoData)
 {
     divfordemo = d3.select('#sample-metadata');
+    divfordemo.html("");
     for (const [key, value] of Object.entries(DemoData)) {
         var row = divfordemo.append("div")
         row.append("span")
@@ -103,7 +104,7 @@ function optionChanged(otuId) {
 
     let metaInfo = getMetaData(otuId);
     DemographicInfoPanel(metaInfo); 
-}
+};
 
 // Load the data
 d3.json("data/samples.json")
