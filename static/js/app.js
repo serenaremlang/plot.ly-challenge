@@ -112,7 +112,7 @@ d3.json("data/samples.json")
     // Parse out the samples section for use
     samples = data.samples;
     metaData = data.metadata;
-    console.log(metaData);
+    // console.log(metaData);
 
     // Load the select dropdownlist with the ID's to filter on
     d3.select('#selDataset')
