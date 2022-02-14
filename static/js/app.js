@@ -29,7 +29,7 @@ function getBarData(otuId) {
     };
 
     return BarData;
-}
+};
 
 // Function to get data for Bubble plot
 function getBubbleData(otuId) {
@@ -68,7 +68,8 @@ function getBubbleData(otuId) {
     };
 
     return BubbleData;
-}
+};
+
 // Function to get data for demographic box
 function getMetaData(otuId) {
     //filter the data for the plot, labels and hovertext
