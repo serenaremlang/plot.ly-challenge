@@ -108,7 +108,7 @@ function optionChanged(otuId) {
 }
 
 // Load the data
-d3.json("../../data/samples.json")
+d3.json("../data/samples.json")
 .then(function(data){
 
     // Parse out the samples section for use
